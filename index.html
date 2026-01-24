@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaeseok "Sean" Lee | Economist</title>
+    <meta name="description"
+        content="Academic portfolio of Jaeseok Sean Lee - Advanced Researcher specializing in Climate Econometrics and Data Engineering.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        slate: {
+                            850: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* Custom animation for popup */
+        .popup-transition {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(10px);
+        }
+
+        .group:hover .popup-transition {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-bold text-xl tracking-tight text-slate-900">Jaeseok Sean Lee</a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="#about"
+                        class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                    <a href="#research"
+                        class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Research</a>
+                    <a href="#code"
+                        class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Code</a>
+                    <a href="#skills"
+                        class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Skills</a>
+                    <a href="#education"
+                        class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Education</a>
+                    <a href="#experience"
+                        class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Experience</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#about"
+                    class="block px-3 py-3 text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-blue-600 rounded-md">About</a>
+                <a href="#research"
+                    class="block px-3 py-3 text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-blue-600 rounded-md">Research</a>
+                <a href="#code"
+                    class="block px-3 py-3 text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-blue-600 rounded-md">Code
+                    Repos</a>
+                <a href="#skills"
+                    class="block px-3 py-3 text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-blue-600 rounded-md">Skills</a>
+                <a href="#education"
+                    class="block px-3 py-3 text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-blue-600 rounded-md">Education</a>
+                <a href="#experience"
+                    class="block px-3 py-3 text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-blue-600 rounded-md">Experience</a>
+                <a href="#contact" class="block px-3 py-3 text-base font-medium text-blue-600 font-semibold">Contact
+                    Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-32 pb-20 md:pt-40 md:pb-28 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+
+                <!-- Profile Image -->
+                <div class="flex-shrink-0">
+                    <div
+                        class="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white shadow-xl ring-1 ring-slate-900/5 bg-white">
+                        <!-- Replace src with your actual image path, e.g., 'assets/profile.jpg' -->
+                        <img src="assets/profile.jpg" alt="Jaeseok Sean Lee" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Intro Text -->
+                <div class="flex-1 text-center md:text-left">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight mb-6">
+                        Jaeseok "Sean" Lee
+                    </h1>
+                    <p class="text-xl text-slate-600 leading-relaxed mb-8 max-w-2xl mx-auto md:mx-0">
+                        <!-- Advanced Researcher specializing in <span class="text-slate-900 font-medium">Climate Econometrics</span> and <span class="text-slate-900 font-medium">Data Engineering</span>.  -->
+                        I am an Advanced Researcher specializing in Climate Economics and Data Engineering. My research
+                        focuses on the economic damages and distributional effects of climate change.
+                        I build bridges between rich meteorological data and economic indicators, using high-performance
+                        Python computing to analyze their relationship.
+                    </p>
+
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-8">
+                        <!-- <a href="javascript:void(0)" onclick="downloadCV()" class="inline-flex items-center justify-center px-6 py-3 border border-slate-200 text-base font-medium rounded-lg text-slate-700 bg-white hover:bg-slate-50 hover:text-slate-900 transition-all">
+                            <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download CV
+                        </a> -->
+
+                        <div class="flex items-center gap-6 text-slate-500">
+                            <a href="https://github.com/SeanJSLee" class="hover:text-blue-600 transition-colors"
+                                aria-label="GitHub">
+                                <i data-lucide="github" class="w-6 h-6"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/seanjaeseoklee"
+                                class="hover:text-blue-600 transition-colors" aria-label="LinkedIn">
+                                <i data-lucide="linkedin" class="w-6 h-6"></i>
+                            </a>
+                            <a href="https://orcid.org/0000-0002-1543-2813"
+                                class="hover:text-[#A6CE39] transition-colors" aria-label="ORCID">
+                                <!-- ORCID SVG Icon -->
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.325 0 3.325-5.334 0-5.334h-2.297z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="py-20 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl font-bold text-slate-900">Research</h2>
+                <div class="h-px bg-slate-200 flex-1"></div>
+            </div>
+
+            <!-- Job Market Paper -->
+            <div class="mb-12">
+                <div class="flex items-baseline justify-between mb-4">
+                    <span class="text-sm font-bold text-blue-600 tracking-wide uppercase">Current Research
+                        Project</span>
+                    <span class="text-sm text-slate-400">Working Paper (Available upon request)</span>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900 mb-4">
+                    A Cross-Dose-Response Function: Mortality-Temperature Relationship with Temperature Quantile
+                </h3>
+                <p class="text-slate-600 mb-4 leading-relaxed text-lg">
+                    This paper introduces a Cross-Dose-Response Function (CDRF) model that reconciles rich
+                    meteorological data with socioeconomic availability.
+                    By mapping hourly temperature quantiles to monthly mortality, I mitigate aggregation bias while
+                    circumventing data privacy restrictions associated with daily time-series models.
+                </p>
+
+                <!-- Download Research Brief Button -->
+                <div class="mb-8">
+                    <a href="assets\cdrf\Research_Brief_Quantile_CDRF_Lee.pdf" target="_blank"
+                        class="inline-flex items-center justify-center px-4 py-2 border border-blue-200 text-sm font-medium rounded-lg text-blue-700 bg-blue-50 hover:bg-blue-100 hover:text-blue-900 hover:border-blue-300 transition-all shadow-sm">
+                        <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> Download Research Brief
+                    </a>
+                </div>
+
+                <!-- Key Findings Grid with Hover Effects -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+
+                    <!-- Finding 1: Climate Inequality -->
+                    <div
+                        class="group relative bg-slate-50 p-5 rounded-lg border border-slate-100 hover:border-emerald-200 hover:shadow-md transition-all cursor-help">
+                        <!-- Popup Image -->
+                        <div
+                            class="popup-transition opacity-0 invisible group-hover:opacity-100 group-hover:visible absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-80 md:w-96 bg-white p-2 rounded-lg shadow-xl border border-slate-200 z-10 pointer-events-none">
+                            <div class="text-xs font-semibold text-slate-500 mb-1 px-1">Figure: Income DRF (from paper)
+                            </div>
+                            <!-- Placeholder: Replace src with actual screenshot of Figure 11 (Income DRF) -->
+                            <!-- <img src="assets\cdrf\drf_income.svg" alt="Graph showing Income Dose-Response Function" class="w-full rounded bg-slate-100 h-48 object-cover object-center"> -->
+                            <img src="assets\cdrf\drf_income.svg" alt="Graph showing Income Dose-Response Function"
+                                class="w-full rounded bg-slate-100 object-contain p-1">
+                            <!-- Arrow -->
+                            <div
+                                class="absolute top-full left-1/2 -translate-x-1/2 -mt-px border-8 border-transparent border-t-white">
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 mb-2">
+                            <div
+                                class="p-2 bg-emerald-100 text-emerald-600 rounded-md group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                                <i data-lucide="trending-up" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-sm uppercase">Climate Inequality</h4>
+                        </div>
+                        <p class="text-slate-600 text-sm">
+                            Adaptation is strictly constrained by economic capacity. A <strong>25% increase in
+                                income</strong> reduces mortality risk by approximately <strong>10%</strong> across all
+                            temperatures.
+                        </p>
+                    </div>
+
+                    <!-- Finding 2: Demographic Risk -->
+                    <div
+                        class="group relative bg-slate-50 p-5 rounded-lg border border-slate-100 hover:border-rose-200 hover:shadow-md transition-all cursor-help">
+                        <!-- Popup Image -->
+                        <div
+                            class="popup-transition opacity-0 invisible group-hover:opacity-100 group-hover:visible absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-80 md:w-96 bg-white p-2 rounded-lg shadow-xl border border-slate-200 z-10 pointer-events-none">
+                            <div class="text-xs font-semibold text-slate-500 mb-1 px-1">Figure: Age DRF (from paper)
+                            </div>
+                            <!-- Placeholder: Replace src with actual screenshot of Figure 11 (Age DRF) -->
+                            <img src="assets\cdrf\drf_age.svg" alt="Graph showing Age Dose-Response Function"
+                                class="w-full rounded bg-slate-100 object-contain p-1">
+                            <!-- Arrow -->
+                            <div
+                                class="absolute top-full left-1/2 -translate-x-1/2 -mt-px border-8 border-transparent border-t-white">
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 mb-2">
+                            <div
+                                class="p-2 bg-rose-100 text-rose-600 rounded-md group-hover:bg-rose-600 group-hover:text-white transition-colors">
+                                <i data-lucide="users" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-sm uppercase">Demographic Risk</h4>
+                        </div>
+                        <p class="text-slate-600 text-sm">
+                            Aging populations face disproportionate risks. A <strong>3-year increase</strong> in county
+                            mean age correlates with a <strong>~25% higher</strong> mortality rate, regardless of
+                            temperature.
+                        </p>
+                    </div>
+
+                    <!-- Finding 3: Method Innovation -->
+                    <div
+                        class="group relative bg-slate-50 p-5 rounded-lg border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all cursor-help">
+                        <!-- Popup Image -->
+                        <div
+                            class="popup-transition opacity-0 invisible group-hover:opacity-100 group-hover:visible absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-80 md:w-96 bg-white p-2 rounded-lg shadow-xl border border-slate-200 z-10 pointer-events-none">
+                            <div class="text-xs font-semibold text-slate-500 mb-1 px-1">Figure: Quantile Coverage (from
+                                paper)</div>
+                            <!-- Placeholder: Replace src with actual screenshot of Figure 19 or 3 (Quantile vs MinMax) -->
+                            <img src="assets\cdrf\res_trf_main_fe.svg" alt="Graph showing Temperature Quantile Coverage"
+                                class="w-full rounded bg-slate-100 object-contain p-1">
+                            <!-- Arrow -->
+                            <div
+                                class="absolute top-full left-1/2 -translate-x-1/2 -mt-px border-8 border-transparent border-t-white">
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 mb-2">
+                            <div
+                                class="p-2 bg-blue-100 text-blue-600 rounded-md group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                <i data-lucide="database" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-sm uppercase">Method Innovation</h4>
+                        </div>
+                        <p class="text-slate-600 text-sm">
+                            Utilized <strong>temperature quantiles</strong> to internalize local acclimatization. This
+                            allows for robust semi-parametric estimation using public monthly data instead of restricted
+                            daily files.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Technical Details -->
+                <div class="bg-white rounded-lg p-4 border border-slate-200">
+                    <ul class="space-y-2 text-sm text-slate-700">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="code-2" class="w-4 h-4 text-blue-500 mt-0.5"></i>
+                            <span><strong>Implementation:</strong> Processed nearly 40 years of hourly weather data
+                                (1982-2019) across 403 U.S. counties using custom Python & GPU computing
+                                pipelines.</span>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Publication -->
+            <div class="group border-t border-slate-100 pt-10">
+                <div class="flex items-baseline justify-between mb-2">
+                    <span class="text-sm font-bold text-emerald-600 tracking-wide uppercase">Publication</span>
+                    <span class="text-sm text-slate-400">2023</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">
+                    Academic mobility in U.S. public schools: Evidence from nearly 3 million students
+                </h3>
+                <p class="text-slate-500 text-sm mb-3 italic">
+                    with Cory Koede, Eric Parsons, et al.
+                </p>
+                <div class="text-slate-700 font-medium">
+                    Journal of Public Economics, Volume 228
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Selected Code Repositories -->
+    <section id="code" class="py-20 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="text-3xl font-bold text-slate-900">Selected Repositories</h2>
+                <div class="h-px bg-slate-200 flex-1"></div>
+            </div>
+
+            <p class="text-slate-600 mb-8 max-w-2xl">
+                A selection of open-source tools and data engineering pipelines I have developed for econometric
+                analysis and automation.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Repo 1: ctrf -->
+                <div
+                    class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div
+                            class="p-2 bg-blue-50 rounded-lg text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <i data-lucide="chart-line" class="w-6 h-6"></i>
+                        </div>
+                        <a href="https://github.com/SeanJSLee/PyCrossTRF"
+                            class="text-slate-400 hover:text-slate-900 transition-colors">
+                            <i data-lucide="external-link" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">PyCrossTRF</h3>
+                    <p class="text-slate-600 text-sm mb-4">
+                        A toolkit for estimating the flexible Fourier functional (FFF) form and performing inference
+                        using sieve bootstrapping.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md font-mono">geopandas</span>
+                        <span
+                            class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md font-mono">linearmodels</span>
+                        <span
+                            class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md font-mono">matplotlib</span>
+                        <span
+                            class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md font-mono">scikit-learn</span>
+                        <span
+                            class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md font-mono">scipy</span>
+                        <span
+                            class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md font-mono">seaborn</span>
+                        <span
+                            class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md font-mono">statsmodels</span>
+                        <span
+                            class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md font-mono">pandas</span>
+                        <span
+                            class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md font-mono">pyarrow</span>
+                        <span
+                            class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md font-mono">pytorch</span>
+                    </div>
+                </div>
+
+                <!-- Repo 2: fips crosswork -->
+                <div
+                    class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div
+                            class="p-2 bg-emerald-50 rounded-lg text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <i data-lucide="map" class="w-6 h-6"></i>
+                        </div>
+                        <a href="https://github.com/SeanJSLee/VintageFIPS"
+                            class="text-slate-400 hover:text-slate-900 transition-colors">
+                            <i data-lucide="external-link" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">VintageFIPS</h3>
+                    <p class="text-slate-600 text-sm mb-4">
+                        A python package that processes changes in U.S. FIPS codes and generates a crosswalk through
+                        2020.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md font-mono">FIPS</span>
+                        <span
+                            class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md font-mono">GIS</span>
+                        <span
+                            class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md font-mono">SEER
+                            population</span>
+                        <span
+                            class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md font-mono">TIGER</span>
+                        <span
+                            class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md font-mono">pandas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <a href="https://github.com/SeanJSLee"
+                    class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors">
+                    View full GitHub profile <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack / Skills -->
+    <section id="skills" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12">Technical Expertise</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Computing -->
+                <div class="p-6 bg-slate-800 rounded-xl border border-slate-700">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="p-2 bg-blue-500/20 rounded-lg text-blue-400">
+                            <i data-lucide="terminal" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Computing & Data</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-mono text-slate-300">Python</span>
+                                <span class="text-blue-400 text-xs font-bold uppercase">Expert</span>
+                            </div>
+                            <div class="w-full bg-slate-700 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-mono text-slate-300">STATA</span>
+                                <span class="text-blue-400 text-xs font-bold uppercase">Expert</span>
+                            </div>
+                            <div class="w-full bg-slate-700 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-mono text-slate-300">SAS</span>
+                                <span class="text-blue-400 text-xs font-bold uppercase">Advanced</span>
+                            </div>
+                            <div class="w-full bg-slate-700 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-mono text-slate-300">R</span>
+                                <span class="text-blue-400 text-xs font-bold uppercase">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-slate-700 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Methodologies -->
+                <div class="p-6 bg-slate-800 rounded-xl border border-slate-700">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="p-2 bg-purple-500/20 rounded-lg text-purple-400">
+                            <i data-lucide="cpu" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Methodologies</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-slate-300">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-purple-500"></i>
+                            Econometric Modeling
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-purple-500"></i>
+                            GPU Computing & Multiprocessing
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-purple-500"></i>
+                            GIS & Spatial Analysis
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-purple-500"></i>
+                            Large-Scale Database Management
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Education -->
+    <section id="education" class="py-20 px-4 bg-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12">Education</h2>
+
+            <div class="relative border-l-2 border-slate-200 ml-3 space-y-12">
+                <!-- PhD -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white">
+                    </div>
+                    <div class="mb-1 text-sm font-semibold text-slate-500 uppercase tracking-wide">Aug 2019 - Dec 2023
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">ABD in Economics</h3>
+                    <div class="text-slate-600 mb-2">University of Missouri-Columbia, U.S.</div>
+                    <p class="text-slate-500 text-sm">Fields: Climate Economics, Applied Microeconomics, Econometrics
+                    </p>
+                </div>
+
+                <!-- MA -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white">
+                    </div>
+                    <div class="mb-1 text-sm font-semibold text-slate-500 uppercase tracking-wide">Aug 2018 - Jul 2020
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">M.A. in Economics</h3>
+                    <div class="text-slate-600 mb-2">University of Missouri-Columbia, U.S.</div>
+                    <!-- <p class="text-slate-500 text-sm">Major: Economics</p> -->
+                </div>
+
+                <!-- Exchange -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white">
+                    </div>
+                    <div class="mb-1 text-sm font-semibold text-slate-500 uppercase tracking-wide">Sep 2013 - Jun 2014
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Exchange Student</h3>
+                    <div class="text-slate-600 mb-2">Southern Oregon University, U.S.</div>
+                </div>
+
+                <!-- BA -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white">
+                    </div>
+                    <div class="mb-1 text-sm font-semibold text-slate-500 uppercase tracking-wide">Mar 2008 - Feb 2015
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">B.A. in Economics</h3>
+                    <div class="text-slate-600 mb-2">Yeungnam University, South Korea</div>
+                    <p class="text-slate-500 text-sm">Major: Economics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="py-20 px-4 bg-slate-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12">Professional Experience</h2>
+
+            <div class="relative border-l-2 border-slate-200 ml-3 space-y-12">
+
+                <!-- Current Role -->
+                <div class="relative pl-8">
+                    <div
+                        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow-sm">
+                    </div>
+                    <div class="mb-1 text-sm font-semibold text-blue-600 uppercase tracking-wide">May 2024 - Present
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Researcher</h3>
+                    <div class="text-slate-600 mb-2">Institute of Regional Economy, Yeungnam University</div>
+                </div>
+
+                <!-- Teaching -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white">
+                    </div>
+                    <div class="mb-1 text-sm font-semibold text-slate-500 uppercase tracking-wide">Aug 2021 - May 2023
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Head Teaching Assistant</h3>
+                    <div class="text-slate-600 mb-2">University of Missouri-Columbia (Principles of Microeconomics)
+                    </div>
+                </div>
+
+                <!-- Research Assistant Mizzou -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white">
+                    </div>
+                    <div class="mb-1 text-sm font-semibold text-slate-500 uppercase tracking-wide">Jul 2019 - May 2021
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Research Assistant</h3>
+                    <div class="text-slate-600 mb-2">University of Missouri-Columbia</div>
+                </div>
+
+                <!-- Research Assistant Yeungnam -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white">
+                    </div>
+                    <div class="mb-1 text-sm font-semibold text-slate-500 uppercase tracking-wide">Mar 2012 - Jun 2018
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Research Assistant</h3>
+                    <div class="text-slate-600 mb-2">School of Economics & Finance, Yeungnam University</div>
+                </div>
+
+                <!-- ROK Army -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white">
+                    </div>
+                    <div class="mb-1 text-sm font-semibold text-slate-500 uppercase tracking-wide">2008 - 2010</div>
+                    <h3 class="text-xl font-bold text-slate-900">Sergent</h3>
+                    <!-- <p class="text-slate-500 text-sm">Architected a bilateral international trade database (SITC/HS codes). Developed SAS code for 3SLS trade models.</p> -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="contact" class="bg-white py-16 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <!-- <h2 class="text-2xl font-bold text-slate-900 mb-6">Let's Connect</h2> -->
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto">
+                <!-- I am currently open to research collaborations and opportunities in climate econometrics and data science. -->
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                <a href="https://github.com/SeanJSLee"
+                    class="flex items-center justify-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-lg text-slate-700 hover:border-slate-800 hover:text-slate-900 transition-all shadow-sm">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                    <span>GitHub Profile</span>
+                </a>
+                <a href="https://www.linkedin.com/in/seanjaeseoklee"
+                    class="flex items-center justify-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-lg text-slate-700 hover:border-blue-700 hover:text-blue-700 transition-all shadow-sm">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    <span>LinkedIn Profile</span>
+                </a>
+                <a href="https://orcid.org/0000-0002-1543-2813"
+                    class="flex items-center justify-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-lg text-slate-700 hover:border-[#A6CE39] hover:text-[#A6CE39] transition-all shadow-sm">
+                    <!-- ORCID SVG Icon -->
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.325 0 3.325-5.334 0-5.334h-2.297z" />
+                    </svg>
+                    <span>ORCID Profile</span>
+                </a>
+            </div>
+
+            <div class="text-slate-400 text-sm">
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear())</script> Jaeseok Sean Lee. All rights reserved.
+                </p>
+                <!-- <p class="mt-2 text-xs">Based in Gyeongsan-si, South Korea</p> -->
+                <p class="mt-2 text-xs">Based in South Korea</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Hide mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Sticky Navbar effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-sm');
+            } else {
+                navbar.classList.remove('shadow-sm');
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
